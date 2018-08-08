@@ -10,6 +10,7 @@ const connect = (...list) => A => class extends React.Component {
         this.setState({});
       };
     });
+    this.setState({});
   }
 
   render() {
