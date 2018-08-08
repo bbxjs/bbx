@@ -28,7 +28,7 @@ class User extends State {
 }
 ```
 
-2. 实例化这个 DemoState 类
+2. 实例化这个类
 
 ```js
 const user = new User();
@@ -129,8 +129,9 @@ class User extends State {
 }
 ```
 
-TODO 说明有什么用
-TOTO 说明 loading
+- TODO 说明有什么用
+
+- TOTO 说明 loading
 
 ### 更多示例
 
