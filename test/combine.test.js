@@ -4,12 +4,12 @@ describe('bbx combine', () => {
   test('combine', async () => {
     const array = [];
     class Data1 extends State {
-      willUpdate(nextState) {
+      willUpdate() {
         array.push(1);
       }
     }
     class Data2 extends State {
-      willUpdate(nextState) {
+      willUpdate() {
         array.push(2);
       }
     }
@@ -18,5 +18,4 @@ describe('bbx combine', () => {
     data.setState({});
     expect(array).toEqual([1, 2]);
   });
-
 });

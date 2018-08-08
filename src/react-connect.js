@@ -3,7 +3,7 @@ import React from 'react';
 const connect = (...list) => A => class extends React.Component {
   constructor(props) {
     super(props);
-    list.forEach(obj => {
+    list.forEach((obj) => {
       const didUpdate = obj.didUpdate.bind(obj);
       obj.didUpdate = (...args) => {
         didUpdate(...args);
@@ -11,9 +11,10 @@ const connect = (...list) => A => class extends React.Component {
       };
     });
   }
+
   render() {
-    return <A {...this.props} />
+    return <A {...this.props} />;
   }
-}
+};
 
 export default connect;

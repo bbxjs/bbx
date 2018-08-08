@@ -1,4 +1,4 @@
-/*  
+/*
   example:
 
   class Data extends State{
@@ -8,7 +8,7 @@
         age: '',
       },
     }
-    
+
     @loading
     async getUser() {
       const { name, age } = await request('/api/user.json');
@@ -34,17 +34,20 @@
 */
 function loading(target, name, descriptor) {
   const method = descriptor.value;
-  const asyncFunction = async function () {
+  async function asyncFunction(...args) {
     this.setState({
       [`${name}Loading`]: true,
     });
-    const result = await method.apply(this, arguments);
+    const result = await method.apply(this, args);
     this.setState({
       [`${name}Loading`]: false,
     });
     return result;
+  }
+  return {
+    ...descriptor,
+    value: asyncFunction,
   };
-  descriptor.value = asyncFunction;
 }
 
 export default loading;

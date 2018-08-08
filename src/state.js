@@ -2,9 +2,10 @@ class State {
   constructor() {
     this.state = {};
   }
+
   /*
-     setState -> 
-     willUpdate -> 
+     setState ->
+     willUpdate ->
      shouldUpdate -> if (not true) end; if (true) ->
      didUpdate
   */
@@ -23,13 +24,16 @@ class State {
       this.didUpdate(prevState);
     }
   }
+
   willUpdate() {
     /* call willUpdate */
   }
+
   shouldUpdate() {
     /* default: true */
     return true;
   }
+
   didUpdate() {
     /* call didUpdate */
   }
