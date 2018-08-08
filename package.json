@@ -1,6 +1,6 @@
 {
   "name": "bbx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "极简单的React状态管理方法",
   "main": "lib/index.js",
   "scripts": {
@@ -20,12 +20,16 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
     "babel-jest": "^23.4.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.4.0",
+    "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.0.0",
     "jest": "^23.4.2",
-    "react": "^16.4.2"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   }
 }
