@@ -6,7 +6,7 @@ import { State, connect } from '../src';
 Enzyme.configure({ adapter: new Adapter() });
 
 
-describe.only('bbx connect', () => {
+describe('bbx connect', () => {
   test('connect', async () => {
     class Data extends State {
       constructor() {
