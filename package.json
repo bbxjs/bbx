@@ -1,0 +1,31 @@
+{
+  "name": "bbx",
+  "version": "1.0.0",
+  "description": "极简单的React状态管理方法",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "jest"
+  },
+  "author": "https://github.com/zinkey",
+  "homepage": "https://github.com/bbxjs/bbx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbxjs/bbx.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "jest": "^23.4.2",
+    "react": "^16.4.2"
+  }
+}
