@@ -1,12 +1,14 @@
 {
   "name": "bbx",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "极简单的React状态管理方法",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "test": "jest",
-    "lint": "eslint src test"
+    "test": "npm run lint && jest",
+    "lint": "eslint src test",
+    "precommit": "npm run lint",
+    "pub": "npm test && npm run build && npm publish"
   },
   "author": "https://github.com/zinkey",
   "homepage": "https://github.com/bbxjs/bbx",

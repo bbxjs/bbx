@@ -1,6 +1,6 @@
 import { State, loading } from '../src';
 
-describe.only('bbx loading', () => {
+describe('bbx loading', () => {
   test('loading', (done) => {
     class Data extends State {
       @loading
