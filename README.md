@@ -4,9 +4,9 @@
 
 ### 特点
 
-- **简单**: 了解 api 基本没成本，会用 React 即会用 bbx
-- **清晰**: state 全程可监控
-- **扩展**: 采用类的继承可扩展更多的功能
+- **简单:baby:**: 了解 api 基本没成本，会用 React 即会用 bbx
+- **清晰:sun_with_face:**: state 全程可监控
+- **扩展:hatching_chick:**: 采用类的继承可扩展更多的功能
 
 
 ### 使用
@@ -44,8 +44,8 @@ import { connect } from 'bbx';
 class App extends React.Component {
   render() {
     return <div>
-      <p>{user.name}</p>
-      <p>{user.age}</p>
+      <p>{user.state.name}</p>
+      <p>{user.state.age}</p>
     </div>;
   }
 }
@@ -53,7 +53,7 @@ class App extends React.Component {
 
 到这里，你已经能定义一个 state，再使用这个 state 了，接下来再看看怎么修改这个 state：
 
-4. 修改下 User 类，添加一个 getUser 的方法
+4. 修改下 User 类，添加一个请求用户的方法
 
 ```js
 import { State } from 'bbx';
@@ -92,8 +92,8 @@ class App extends React.Component {
   }
   render() {
     return <div>
-      <p>{user.name}</p>
-      <p>{user.age}</p>
+      <p>{user.state.name}</p>
+      <p>{user.state.age}</p>
     </div>;
   }
 }
@@ -106,9 +106,101 @@ class App extends React.Component {
 
 ### 进阶
 
-在了解了 “使用” 后，已经能上手开发项目了，而以下的内容是进一步了解 bbx 的更多能力
+在了解了 “使用” 后，已经能上手开发项目了，而以下的内容是进一步了解 bbx 的更多能力。
 
-- setState 调用流程
+
+#### loading
+
+还是之前的示例：
+
+```js
+import { connect } from 'bbx';
+
+@connect(user)
+class App extends React.Component {
+  componentDidMount() {
+    user.requestUser();
+  }
+  render() {
+    return <div>
+      <p>{user.state.name}</p>
+      <p>{user.state.age}</p>
+    </div>;
+  }
+}
+```
+
+因为 requestUser 是一个异步方法，那在请求返回前，想要在界面上加一个 loading 告诉用户正在请求，这个要怎么做呢？
+
+比较简单的方式修改 requestUser 方法，在请求前加一个属性表示正在请求，之后再修改这个属性表示请求完成。
+
+```js
+  async requestUser() {
+    // 添加一个 requestUserLoading 用来表示是否在 loading
+    this.setState({
+      requestUserLoading: true;
+    });
+
+    const { name, age } = await request('/api/user.json');
+    this.setState({
+      name,
+      age,
+    });
+
+    // 请求完成，requestUserLoading 改为 false
+    this.setState({
+      requestUserLoading: false;
+    });
+  }
+```
+
+之后在 App 里就能使用了：
+
+```js
+import { connect } from 'bbx';
+
+@connect(user)
+class App extends React.Component {
+  componentDidMount() {
+    user.requestUser();
+  }
+  render() {
+    return user.state.requestUserLoading ?
+      <div>
+        loading...
+      </div>
+      :
+      <div>
+        <p>{user.state.name}</p>
+        <p>{user.state.age}</p>
+      </div>;
+  }
+}
+```
+
+但是，要是有不少异步方法都要去改？
+
+bbx 提供了 loading 来简化：
+
+```js
+import { loading } from 'bbx';
+
+...
+  @loading
+  async requestUser() {
+    const { name, age } = await request('/api/user.json');
+    this.setState({
+      name,
+      age,
+    });
+  }
+...
+```
+
+只用在方法前使用 @loading，即可在 state 里添加一个 “方法名Loading” 的属性。
+
+
+#### setState 调用流程
 
 当调用 this.setState，都会有以下方法调用流程
 
@@ -131,7 +223,7 @@ class User extends State {
 
 - TODO 说明有什么用
 
-- TOTO 说明 loading
+- TOTO 说明 update
 
 ### 更多示例
 
