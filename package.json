@@ -5,10 +5,10 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "test": "npm run lint && jest",
+    "test": "jest",
     "lint": "eslint src test",
     "precommit": "npm run lint",
-    "pub": "npm test && npm run build && npm publish"
+    "pub": "npm run lint && npm test && npm run build && npm publish"
   },
   "author": "https://github.com/zinkey",
   "homepage": "https://github.com/bbxjs/bbx",
