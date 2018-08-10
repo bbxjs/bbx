@@ -1,6 +1,6 @@
 {
   "name": "bbx",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "极简单的React状态管理方法",
   "main": "lib/index.js",
   "scripts": {
