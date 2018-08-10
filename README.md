@@ -1,15 +1,15 @@
-# 中文 README.md
+## 中文 README.md
 
 𝕓𝕓𝕩 是一个极其简单高效的 React 状态管理方式
 
-## 特点
+### 特点
 
 - **简单:baby:**: 了解 api 基本没成本，会用 React 即会用 bbx
 - **清晰:sun_with_face:**: state 全程可监控
 - **扩展:hatching_chick:**: 采用类的继承可扩展更多的功能
 
 
-## 使用
+### 使用
 
 1. 建立一个状态类，继承于 bbx State
 
@@ -104,7 +104,7 @@ class App extends React.Component {
 - State: 定义一个 state，采用 this.setState 修改 state
 - connect：连接 state 到 React 组件
 
-## 进阶
+### 进阶
 
 在了解了 “使用” 后，已经能上手开发项目了，而以下的内容是进一步了解 bbx 的更多能力。
 
@@ -200,7 +200,7 @@ import { loading } from 'bbx';
 只用在方法前使用 @loading，即可在 state 里添加一个 “方法名Loading” 的属性。
 
 
-#### 2. lastest
+#### 2. latest
 
 前端开发中经典的问题之一：分页请求顺序问题。
 
