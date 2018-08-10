@@ -39,4 +39,56 @@ describe('bbx connect', () => {
 
     expect(shallow(<App />).html()).toEqual('<div>lily 1</div>');
   });
+
+  test('connect multiple state', async () => {
+    class Data extends State {
+      constructor() {
+        super();
+        this.state = {
+          name: '',
+          age: '',
+        };
+      }
+
+      getUser() {
+        this.setState({
+          name: 'lily',
+          age: '1',
+        });
+      }
+    }
+
+    class Data2 extends State {
+      constructor() {
+        super();
+        this.state = {
+          name: '',
+          age: '',
+        };
+      }
+
+      getUser() {
+        this.setState({
+          name: 'lily2',
+          age: '2',
+        });
+      }
+    }
+    const data = new Data();
+    const data2 = new Data2();
+
+    @connect(data)
+    class App extends React.Component {
+      render() {
+        return <div>{data.state.name} {data.state.age} {data2.state.name} {data2.state.age}</div>;
+      }
+    }
+
+    expect(shallow(<App />).html()).toEqual('<div>   </div>');
+
+    data.getUser();
+    data2.getUser();
+
+    expect(shallow(<App />).html()).toEqual('<div>lily 1 lily2 2</div>');
+  });
 });
