@@ -1,7 +1,6 @@
 module.exports = {
   title: 'bbx',
   description: '𝕓𝕓𝕩 是一个极其简单高效的 React 状态管理方式',
-  base: '/bbx/'
   themeConfig: {
     repo: 'bbxjs/bbx',
     lastUpdated: 'Last Updated',

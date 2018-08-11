@@ -1,7 +1,7 @@
 ---
 home: true
-actionText: 快速上手
-actionLink: /intro/
+actionText: 开始使用
+actionLink: /start/
 features:
 - title: 超简单 👶
   details: 了解 api 几乎没成本，会用 React 即会用 bbx，或许你已经会用了
