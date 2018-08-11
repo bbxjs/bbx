@@ -9,8 +9,7 @@
     "lint": "eslint src test",
     "precommit": "npm run lint",
     "pub": "npm run lint && npm test && npm run build && npm publish",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vuepress dev docs"
   },
   "author": "https://github.com/zinkey",
   "homepage": "https://github.com/bbxjs/bbx",
@@ -21,6 +20,7 @@
   "files": [
     "lib"
   ],
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
