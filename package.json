@@ -8,7 +8,9 @@
     "test": "jest",
     "lint": "eslint src test",
     "precommit": "npm run lint",
-    "pub": "npm run lint && npm test && npm run build && npm publish"
+    "pub": "npm run lint && npm test && npm run build && npm publish",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "author": "https://github.com/zinkey",
   "homepage": "https://github.com/bbxjs/bbx",
@@ -37,6 +39,7 @@
     "husky": "^0.14.3",
     "jest": "^23.4.2",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "vuepress": "^0.14.1"
   }
 }
