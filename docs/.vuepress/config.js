@@ -22,7 +22,17 @@ module.exports = {
             'async',
           ],
         },
+        {
+          title: '进阶',
+          collapsable: false,
+          children: [
+            'extend',
+            'loading'
+          ],
+        },
       ],
     },
   },
 }
+
+
