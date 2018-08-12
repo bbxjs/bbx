@@ -4,9 +4,9 @@
 
 bbx 的核心很简单，但是你能利用 “扩展” 来使用更多好用的方法。bbx 内置了一些项目开发中会用到的 “扩展”，包括：
 
-- loading 方法
-- latest 方法
-- update 方法
+- [loading 修饰器](loading.html)
+- [latest 修饰器](latest.html)
+- [update 修饰器](update.html)
 
 你可以通过以下方式来使用：
 

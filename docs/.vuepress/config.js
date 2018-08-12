@@ -27,7 +27,8 @@ module.exports = {
           collapsable: false,
           children: [
             'extend',
-            'loading'
+            'loading',
+            'latest'
           ],
         },
       ],

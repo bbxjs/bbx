@@ -73,6 +73,8 @@ bbx 内置了 “loading 修饰器” 来简化，只用给这个异步方法使
 
 ```jsx
 ...
+import { loading } from 'bbx'
+
 @loading
 async requestUser() {
   const { name, age } = await request('/api/user.json');
@@ -86,6 +88,8 @@ async requestUser() {
 ```
 
 给异步方法使用 @loading，即可在 state 里添加一个 `$方法名}Loading` 的属性用来表示异步方法是否执行完成。对于 async requestUser 就会添加一个 requestUserLoading 的属性用来判断是否完成了异步方法。
+
+[查看在线可运行](https://stackblitz.com/edit/bbx-example-loading)
 
 # 说明
 
