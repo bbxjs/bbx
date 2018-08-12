@@ -21,4 +21,4 @@ bbx 是一个极其简单高效的 React 状态管理方式。你可以很方便
 
 而为什么不是 dva，也可以说为什么不是 redux + saga。
 
-因为 bbx 是想要给出一个更简单高效的方式。dva 已经简化了 redux + saga，但底层还是 redux + saga，effects reducer 等概念是少不了的。而在公司内部了解到的真实的项目开发中（超过 300+ Ant Desing Pro 级别项目），发现开发用到的 dva 很少的能力。比如，对于 saga，项目只是调用 call, put，而像 subscriptions 甚至都被不推荐使用。
+因为 bbx 是想要给出一个更简单高效的方式。dva 已经简化了 redux + saga，但底层还是 redux + saga，effects reducer 等概念是少不了的。而在公司内部了解到的真实的项目开发中（超过 300+ [Ant Design Pro](http://pro.ant.design/) 级别项目），发现开发用到的 dva 很少的能力。比如，对于 saga，项目只是调用 call, put，而像 subscriptions 甚至都被不推荐使用。
