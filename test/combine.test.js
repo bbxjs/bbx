@@ -4,12 +4,12 @@ describe('bbx combine', () => {
   test('combine', async () => {
     const array = [];
     class Data1 extends State {
-      willUpdate() {
+      willStateUpdate() {
         array.push(1);
       }
     }
     class Data2 extends State {
-      willUpdate() {
+      willStateUpdate() {
         array.push(2);
       }
     }

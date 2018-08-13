@@ -4,9 +4,9 @@ const connect = (...list) => A => class extends React.Component {
   constructor(props) {
     super(props);
     list.forEach((obj) => {
-      const didUpdate = obj.didUpdate.bind(obj);
-      obj.didUpdate = (...args) => {
-        didUpdate(...args);
+      const didStateUpdate = obj.didStateUpdate.bind(obj);
+      obj.didStateUpdate = (...args) => {
+        didStateUpdate(...args);
         this.setState({});
       };
     });

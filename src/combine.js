@@ -7,22 +7,22 @@ function combine(...classes) {
       this.array = classes.map(Class => new Class(...args));
     }
 
-    willUpdate(nextState) {
-      this.array.forEach(item => item.willUpdate(nextState));
+    willStateUpdate(nextState) {
+      this.array.forEach(item => item.willStateUpdate(nextState));
     }
 
-    shouldUpdate(nextState) {
+    shouldStateUpdate(nextState) {
       for (let i = 0; i < this.array.length; i += 1) {
         const item = this.array[i];
-        if (item.shouldUpdate(nextState)) {
+        if (item.shouldStateUpdate(nextState)) {
           return false;
         }
       }
       return true;
     }
 
-    didUpdate(prevState) {
-      this.array.forEach(item => item.didUpdate(prevState));
+    didStateUpdate(prevState) {
+      this.array.forEach(item => item.didStateUpdate(prevState));
     }
   };
 }

@@ -5,36 +5,36 @@ class State {
 
   /*
      setState ->
-     willUpdate ->
-     shouldUpdate -> if (not true) end; if (true) ->
-     didUpdate
+     willStateUpdate ->
+     shouldStateUpdate -> if (not true) end; if (true) ->
+     didStateUpdate
   */
   setState(nextState) {
-    this.willUpdate(nextState);
+    this.willStateUpdate(nextState);
     // Call shouldUpdate
-    const update = this.shouldUpdate(nextState);
+    const update = this.shouldStateUpdate(nextState);
 
-    // Only "return true" didUpdate will be called
+    // Only "return true" didStateUpdate will be called
     if (update === true) {
       const prevState = this.state;
       this.state = {
         ...prevState,
         ...nextState,
       };
-      this.didUpdate(prevState);
+      this.didStateUpdate(prevState);
     }
   }
 
-  willUpdate() {
+  willStateUpdate() {
     /* call willUpdate */
   }
 
-  shouldUpdate() {
+  shouldStateUpdate() {
     /* default: true */
     return true;
   }
 
-  didUpdate() {
+  didStateUpdate() {
     /* call didUpdate */
   }
 }
