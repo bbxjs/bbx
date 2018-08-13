@@ -32,15 +32,14 @@ const combine = (...list) => (A) => {
       Object.keys(map).forEach((key) => {
         const method = obj[key].bind(obj);
         obj[key] = (...args) => {
-          method(...args);
+          const result = method(...args);
           if (key.indexOf('will') === 0) {
             map[key].forEach(item => item.apply(obj, args));
           }
           if (key.indexOf('should') === 0) {
-            let bool = true;
+            let bool = result;
             map[key].forEach((item) => {
-              const result = item.apply(obj, args);
-              if (result !== true) {
+              if (item.apply(obj, args) !== true) {
                 bool = false;
               }
             });
