@@ -1,4 +1,4 @@
-import combine from './combine';
+import combine from './decorator-combine';
 import connect from './react-connect';
 import loading from './decorator-loading';
 import State from './state';

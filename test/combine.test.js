@@ -33,11 +33,13 @@ describe('bbx combine', () => {
         willStateUpdate();
         expect(nextState).toEqual({ count: 1 });
       }
+
       willMethodCall(name, count) {
         willMethodCall();
         expect(name).toBe('testMethod');
         expect(count).toBe(1);
       }
+
       testMethod() {}
     }
 
@@ -46,7 +48,7 @@ describe('bbx combine', () => {
     expect(willMethodCall.mock.calls.length).toBe(2);
     expect(shouldMethodCall.mock.calls.length).toBe(1);
     expect(didMethodCall.mock.calls.length).toBe(1);
-    
+
     data.setState({ count: 1 });
     expect(willStateUpdate.mock.calls.length).toBe(2);
   });
@@ -65,7 +67,8 @@ describe('bbx combine', () => {
       didMethodCall() {
         didMethodCall();
       }
-      testMethod() { }
+
+      testMethod() {}
     }
 
     const data = new Data();
