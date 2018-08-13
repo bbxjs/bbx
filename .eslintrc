@@ -13,6 +13,7 @@
     "react/jsx-one-expression-per-line": 0,
     "no-self-compare": 0,
     "react/no-multi-comp": 0,
-    "prefer-destructuring": 0
+    "prefer-destructuring": 0,
+    "no-restricted-syntax": 0
   }
 }

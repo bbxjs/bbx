@@ -11,7 +11,7 @@ describe('state', () => {
         };
       }
 
-      willUpdate(nextState) {
+      willDataUpdate(nextState) {
         expect(nextState).toEqual({
           name: 'lily',
           age: '1',
@@ -26,7 +26,7 @@ describe('state', () => {
         });
       }
 
-      shouldUpdate(nextState) {
+      shouldDataUpdate(nextState) {
         expect(nextState).toEqual({
           name: 'lily',
           age: '1',
@@ -34,7 +34,7 @@ describe('state', () => {
         return true;
       }
 
-      didUpdate(prevState) {
+      didDataUpdate(prevState) {
         expect(prevState).toEqual({
           name: '',
           age: '',
@@ -52,7 +52,7 @@ describe('state', () => {
   });
 
 
-  test('shouldUpdate', () => {
+  test('shouldDataUpdate', () => {
     class Data extends State {
       constructor() {
         super();
@@ -62,7 +62,7 @@ describe('state', () => {
         };
       }
 
-      willUpdate(nextState) {
+      willDataUpdate(nextState) {
         expect(nextState).toEqual({
           age: '1',
         });
@@ -74,14 +74,14 @@ describe('state', () => {
         });
       }
 
-      shouldUpdate(nextState) {
+      shouldDataUpdate(nextState) {
         expect(nextState).toEqual({
           age: '1',
         });
         return false;
       }
 
-      didUpdate() {
+      didDataUpdate() {
         throw new Error('will not be called');
       }
     }

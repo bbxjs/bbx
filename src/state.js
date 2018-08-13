@@ -1,5 +1,36 @@
 class State {
   constructor() {
+    for (const key in this) {
+      if (typeof this[key] === 'function' && [
+        'constructor',
+        'setState',
+        'willStateUpdate',
+        'shouldStateUpdate',
+        'didStateUpdate',
+        'willMethodCall',
+        'shouldMethodCall',
+        'didMethodCall',
+      ].indexOf(key) < 0) {
+        const method = this[key].bind(this);
+        this[key] = (...args) => {
+          /*
+            call method ->
+            willMethodCall ->
+            shouldMethodCall -> if (not true) end; if (true) ->
+            call method ->
+            didMethodCall
+          */
+          this.willMethodCall(key, ...args);
+          const update = this.shouldMethodCall(key, ...args);
+          if (update === true) {
+            const result = method(...args);
+            this.didMethodCall(key, ...args);
+            return result;
+          }
+          return undefined;
+        };
+      }
+    }
     this.state = {};
   }
 
@@ -26,7 +57,7 @@ class State {
   }
 
   willStateUpdate() {
-    /* call willUpdate */
+    /* call willStateUpdate */
   }
 
   shouldStateUpdate() {
@@ -35,7 +66,20 @@ class State {
   }
 
   didStateUpdate() {
-    /* call didUpdate */
+    /* call didStateUpdate */
+  }
+
+  willMethodCall() {
+    /* call willMethodCall */
+  }
+
+  shouldMethodCall() {
+    /* default true */
+    return true;
+  }
+
+  didMethodCall() {
+    /* call didMethodCall */
   }
 }
 
