@@ -15,10 +15,12 @@ bbx 是一个极其简单高效的 React 状态管理方式。你可以很方便
 
 # 为什么不是
 
-### dva
+### [dva](https://dvajs.com/)
 
-[dva](https://dvajs.com/) 是一个非常好的 framework，可以认为是 redux + saga 的最佳实践，甚至是 redux 开发的最佳实践。因为真的想不到还有比 dva 更好的方式来开发 redux + saga 的项目。所以，要是你想用 redux 开发项目，推荐使用 dva。
+我可不会说 dva 的坏话！事实上我跟 dva 作者都在一个小组，也曾一起探索过 dva 的改进。
+
+不可否则，dva 是一个非常好的 framework，可以认为是 redux + saga 的最佳实践，甚至是 redux 开发的最佳实践。因为真的想不到还有比 dva 更好的方式来开发 redux + saga 的项目。所以，要是你想用 redux 开发项目，推荐使用 dva。
 
 而为什么不是 dva，也可以说为什么不是 redux + saga。
 
-因为 bbx 是想要给出一个更简单高效的方式。dva 已经简化了 redux + saga，但底层还是 redux + saga，effects reducer 等概念是少不了的。而在公司内部了解到的真实的项目开发中（超过 300+ [Ant Design Pro](http://pro.ant.design/) 级别项目），发现开发用到的 dva 很少的能力。比如，对于 saga，项目只是调用 call, put，而像 subscriptions 甚至都被不推荐使用。
+因为 bbx 是想要给出一个更简单高效的方式。dva 已经简化了 redux + saga，但底层还是 redux + saga，effects reducer 等概念是少不了的。而在公司内部了解到的真实的项目开发中（超过 300+ [Ant Design Pro](http://pro.ant.design/) 项目），发现开发用到的 dva 很少的能力。比如，对于 saga，项目只是调用 call, put，而像 subscriptions 甚至都被不推荐使用。

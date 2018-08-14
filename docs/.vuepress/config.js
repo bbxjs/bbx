@@ -26,17 +26,20 @@ module.exports = {
           title: '进阶',
           collapsable: false,
           children: [
-            'extend',
+            'principles',
             'loading',
             'latest',
             'update',
             'state',
-            'method'
+            'method',
+            'custom-state',
+            'combine'
           ],
         },
       ],
     },
   },
 }
+
 
 

@@ -78,7 +78,7 @@ didMethodCall() {
 
 除非你想使用，否则你不用给你的状态类加上这几个方法。
 
-更多的示例，利用 [“状态流程”](state.html) 跟 [“方法流程”] 来监控全部的方法调用和状态变化。
+更多的示例，利用 [“状态流程”](state.html) 跟 [“方法流程”](method.html) 来监控全部的方法调用和状态变化，以及其他很酷的事情，包括 dev-tool 来更清楚管理 方法和状态，比如 [Time Travel in React Redux apps using the Redux DevTools](https://medium.com/the-web-tub/time-travel-in-react-redux-apps-using-the-redux-devtools-5e94eba5e7c0)
 
 ```jsx
 class Hello extends State {
