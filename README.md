@@ -2,7 +2,7 @@
 
 𝕓𝕓𝕩 是一个极其简单高效的 React 状态管理方式
 
-开始使用：https://bbxjs.github.io/start/
+开始使用：[https://bbxjs.github.io/start/](https://bbxjs.github.io/start/)
 
 ### 特点
 

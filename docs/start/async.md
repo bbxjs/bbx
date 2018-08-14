@@ -56,6 +56,8 @@ class App extends React.Component {
 }
 ```
 
+[在线查看可运行的代码](https://stackblitz.com/edit/bbx-example-async)
+
 # 说明
 
 实例可以看出，当要使用异步方法，可使用 [async function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)
