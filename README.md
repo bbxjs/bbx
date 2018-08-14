@@ -2,7 +2,7 @@
 
 𝕓𝕓𝕩 是一个极其简单高效的 React 状态管理方式
 
-https://bbxjs.github.io/
+开始使用：https://bbxjs.github.io/start/
 
 ### 特点
 
@@ -45,12 +45,3 @@ class App extends React.Component {
 ```
 
 [在线查看可运行的代码](https://stackblitz.com/edit/bbx-example-hello)
-
-
-### 更多示例
-
-- count https://stackblitz.com/edit/bbx-example-count
-- async https://stackblitz.com/edit/bbx-example-async
-- latest https://stackblitz.com/edit/bbx-example-latest
-- update
-https://stackblitz.com/edit/bbx-example-update?file=index.js
