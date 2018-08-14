@@ -8,7 +8,6 @@
 
 比如以下示例，不管是否网络比较慢，用户怎么点击, ui 都会展示最后点击按钮对应的用户。
 
-[查看在线可运行](https://stackblitz.com/edit/bbx-example-latest)
 
 ```jsx
 import { latest } from 'bbx';
@@ -42,6 +41,8 @@ render() {
 }
 ...
 ```
+
+[查看在线可运行](https://stackblitz.com/edit/bbx-example-latest)
 
 更简单的示例，不管怎么调用 change 方法，this.state.id 都是最后一次调用的 id。
 

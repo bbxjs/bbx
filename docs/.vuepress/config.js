@@ -28,7 +28,10 @@ module.exports = {
           children: [
             'extend',
             'loading',
-            'latest'
+            'latest',
+            'update',
+            'state',
+            'method'
           ],
         },
       ],

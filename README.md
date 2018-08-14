@@ -52,3 +52,5 @@ class App extends React.Component {
 - count https://stackblitz.com/edit/bbx-example-count
 - async https://stackblitz.com/edit/bbx-example-async
 - latest https://stackblitz.com/edit/bbx-example-latest
+- update
+https://stackblitz.com/edit/bbx-example-update?file=index.js
