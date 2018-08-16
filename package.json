@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "test": "jest",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "eslint src test",
     "precommit": "npm run lint",
     "pub": "npm run lint && npm test && npm run build && npm publish",
@@ -31,6 +32,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.6",
     "babel-jest": "^23.4.2",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.4.0",
     "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "^5.3.0",
