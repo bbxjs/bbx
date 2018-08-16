@@ -1,4 +1,11 @@
-## 中文 README.md
+## bbx
+
+[![npm](https://img.shields.io/npm/v/bbx.svg?style=flat-square)](https://www.npmjs.com/package/bbx)
+[![travis](https://img.shields.io/travis/bbxjs/bbx.svg?style=flat-square)](https://travis-ci.org/bbxjs/bbx)
+[![Coverage Status](https://coveralls.io/repos/github/bbxjs/bbx/badge.svg?branch=ci)](https://coveralls.io/github/bbxjs/bbx?branch=ci)
+
+
+
 
 𝕓𝕓𝕩 是一个极其简单高效的 React 状态管理方式
 
