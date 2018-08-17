@@ -1,0 +1,9 @@
+{
+  "name": "func-test",
+  "scripts": {
+    "start": "umi dev"
+  },
+  "devDependencies": {
+    "umi": "^1.3.18"
+  }
+}
