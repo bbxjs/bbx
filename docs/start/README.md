@@ -19,7 +19,7 @@ bbx 是一个极其简单高效的 React 状态管理方式。你可以很方便
 
 我可不会说 dva 的坏话！事实上我跟 dva 作者都在一个小组，也曾一起探索过 dva 的改进。
 
-不可否则，dva 是一个非常好的 framework，可以认为是 redux + saga 的最佳实践，甚至是 redux 开发的最佳实践。因为真的想不到还有比 dva 更好的方式来开发 redux + saga 的项目。所以，要是你想用 redux 开发项目，推荐使用 dva。
+不可否认，dva 是一个非常好的 framework，可以认为是 redux + saga 的最佳实践，甚至是 redux 开发的最佳实践。因为真的想不到还有比 dva 更好的方式来开发 redux + saga 的项目。所以，要是你想用 redux 开发项目，推荐使用 dva。
 
 而为什么不是 dva，也可以说为什么不是 redux + saga。
 
