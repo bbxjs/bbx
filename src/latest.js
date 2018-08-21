@@ -2,9 +2,9 @@ function latest(target, name, descriptor) {
   const method = descriptor.value;
   const setState = target.setState;
   let latestArguments;
-  async function asyncFunction(...args) {
+  function asyncFunction(...args) {
     latestArguments = args;
-    const result = await method.apply({
+    const result = method.apply({
       setState: (...setStateArgs) => {
         if (latestArguments === args) {
           setState.apply(this, setStateArgs);
