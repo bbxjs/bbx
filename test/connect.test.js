@@ -91,4 +91,20 @@ describe('bbx connect', () => {
 
     expect(shallow(<App />).html()).toEqual('<div>lily 1 lily2 2</div>');
   });
+
+
+  test.only('connect PureComponent', async () => {
+    class Data extends State {}
+    const data = new Data();
+
+    class App extends React.PureComponent {
+      getUser() {}
+
+      render() {
+        return <div>1</div>;
+      }
+    }
+
+    expect(() => connect(data)(App)).toThrow(new Error('bbx found that you are using "connect" and the PureComponent is passed, don\'t connect a PureComponent.'));
+  });
 });
