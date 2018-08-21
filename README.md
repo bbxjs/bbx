@@ -1,8 +1,10 @@
 ## bbx
 
-[![npm](https://img.shields.io/npm/v/bbx.svg?style=flat-square)](https://www.npmjs.com/package/bbx)
-[![travis](https://img.shields.io/travis/bbxjs/bbx.svg?style=flat-square)](https://travis-ci.org/bbxjs/bbx)
+[![npm](https://img.shields.io/npm/v/bbx.svg)](https://www.npmjs.com/package/bbx)
+[![travis](https://img.shields.io/travis/bbxjs/bbx.svg)](https://travis-ci.org/bbxjs/bbx)
 [![Coverage Status](https://coveralls.io/repos/github/bbxjs/bbx/badge.svg)](https://coveralls.io/github/bbxjs/bbx)
+![David](https://img.shields.io/david/bbxjs/bbx.svg)
+
 
 
 
