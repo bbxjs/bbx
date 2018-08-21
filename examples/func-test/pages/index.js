@@ -22,12 +22,7 @@ class CountState extends State {
 const countState = new CountState();
 
 
-@connect(countState)
-class Preview extends React.Component {
-  render() {
-    return <h1>{countState.state.count}</h1>;
-  }
-}
+const Preview = connect(countState)(() => <h1>{countState.state.count}</h1>);
 
 @connect(countState)
 class App extends React.Component {
