@@ -22,6 +22,11 @@
 
 #### 使用
 
+```
+$ npm install bbx
+```
+
+
 1. 定义一个状态类
 ```jsx
 import { State } from 'bbx';
