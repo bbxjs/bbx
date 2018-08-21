@@ -34,14 +34,18 @@
 */
 function loading(target, name, descriptor) {
   const method = descriptor.value;
-  async function asyncFunction(...args) {
+  function asyncFunction(...args) {
     this.setState({
       [`${name}Loading`]: true,
     });
-    const result = await method.apply(this, args);
-    this.setState({
-      [`${name}Loading`]: false,
-    });
+    const result = method.apply(this, args);
+    if (result && typeof result.then === 'function') {
+      result.then(() => {
+        this.setState({
+          [`${name}Loading`]: false,
+        });
+      });
+    }
     return result;
   }
   return {
