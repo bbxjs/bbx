@@ -4,6 +4,7 @@ import loading from './loading';
 import State from './state';
 import update from './update';
 import latest from './latest';
+import Use from './Use';
 
 
 export {
@@ -13,4 +14,5 @@ export {
   loading,
   update,
   latest,
+  Use,
 };
