@@ -19,7 +19,11 @@ module.exports = {
           children: [
             '',
             'getting-started',
+            'state',
+            'connect',
+            'use',
             'async',
+            'loading'
           ],
         },
         {
@@ -27,11 +31,10 @@ module.exports = {
           collapsable: false,
           children: [
             'principles',
-            'loading',
             'latest',
             'update',
-            'state',
-            'method',
+            'state-flow',
+            'method-flow',
             'custom-state',
             'combine'
           ],

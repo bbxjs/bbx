@@ -1,6 +1,6 @@
 # 自定义状态类
 
-在了解了 [“状态流程”](state.html) 跟 [“方法流程”](method.html) 后，对于一个 State 的状态变化及方法调用都能很方便监控。
+在了解了 [“状态流程”](state-flow.html) 跟 [“方法流程”](method-flow.html) 后，对于一个 State 的状态变化及方法调用都能很方便监控。
 
 但是项目中，可能有不少状态类，比如：
 
@@ -58,6 +58,6 @@ class CustomState extends State {
 export default CustomState;
 ```
 
-只要继承于 CustomState 的状态类在状态改变前都会先运行这个 `willStateUpdate`，而不用去改 Hello.js 以及 User.js。当然，[“状态流程”](state.html) 跟 [“方法流程”](method.html) 中的方法都能在自定义类中使用。
+只要继承于 CustomState 的状态类在状态改变前都会先运行这个 `willStateUpdate`，而不用去改 Hello.js 以及 User.js。当然，[“状态流程”](state-flow.html) 跟 [“方法流程”](method-flow.html) 中的方法都能在自定义类中使用。
 
 这就是自定义状态类的作用，更方便的扩展状态类的能力。

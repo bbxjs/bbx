@@ -7,8 +7,8 @@ bbx 是一个极其简单高效的 React 状态管理方式。你可以很方便
 可以分为 3 步：
 
 - 定义一个状态类
-- 示例化这个类
-- 连接这个实例到一个 React 组件
+- 实例化这个状态类
+- 在 React 中使用这个实例
 
 接着 bbx 就能工作了。你可修改这个实例的状态，接着，React 组件也会刷新。没有其他的概念，就这 3 步。
 
@@ -17,9 +17,7 @@ bbx 是一个极其简单高效的 React 状态管理方式。你可以很方便
 
 ### [dva](https://dvajs.com/)
 
-我可不会说 dva 的坏话！事实上我跟 dva 作者都在一个小组，也曾一起探索过 dva 的改进。
-
-不可否认，dva 是一个非常好的 framework，可以认为是 redux + saga 的最佳实践，甚至是 redux 开发的最佳实践。因为真的想不到还有比 dva 更好的方式来开发 redux + saga 的项目。所以，要是你想用 redux 开发项目，推荐使用 dva。
+事实上我跟 dva 作者都在一个小组，也曾一起探索过 dva 的改进，不可否认，dva 是一个非常好的 framework，可以认为是 [redux](https://redux.js.org/) + [saga](https://redux-saga.js.org/) 的最佳实践，甚至是 redux 开发的最佳实践。因为想不到还有比 dva 更好的方式来开发 redux + saga 的项目，所以，要是你想用 redux 开发项目，推荐使用 dva。
 
 而为什么不是 dva，也可以说为什么不是 redux + saga。
 

@@ -5,10 +5,11 @@
 
 bbx 的核心很简单，但是你能利用核心扩展出不少好用的方法，而 bbx 也的确内置了一些项目开发中可能会用到的方法，比如：
 
+- [Use 组件](use.html)
 - [loading 修饰器](loading.html)
 - [latest 修饰器](latest.html)
 - [update 修饰器](update.html)
 
-而通过了解 bbx 的 [“状态流程”](state.html) 跟 [“方法流程”](method.html) 还会得到更多扩展能力。
+而通过了解 bbx 的 [“状态流程”](state-flow.html) 跟 [“方法流程”](method-flow.html) 还会得到更多扩展能力。
 
 但当你确定你需要，再去使用，这就是 bbx 的设计原则。从另外有的角度，这也回答了 [“快速使用”](/start/) 中为什么不是 redux + saga。因为在实际项目中，大多情况下都不会用到更多的能力，但项目开发却从一开始就成了使用全部能力的样子。

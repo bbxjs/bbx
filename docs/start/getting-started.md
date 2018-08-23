@@ -7,7 +7,7 @@ $ npm install bbx
 
 #### 使用
 
-1. 定义一个状态类
+#### 1. 定义一个状态类
 ```jsx
 import { State } from 'bbx';
 
@@ -17,13 +17,23 @@ class Hello extends State {
 }
 ```
 
-2. 实例化这个类
+#### 2. 实例化这个类
 
 ```jsx
 const hello = new Hello();
 ```
 
-3. 连接这个实例到 React 组件
+#### 3. 在 React 中使用这个实例
+
+在 React 中你可有 “两个方式” 来使用这个实例：
+
+- **[connect 修饰器](connect.html)**
+- **[Use 组件](Use.html)**
+
+1. connect 修饰器
+
+你可通过 `connect 修饰器` 来连接 state 跟 React 组件。当 state 更新，React 组件也会更新。
+
 ```jsx
 import { connect } from 'bbx';
 
@@ -37,47 +47,31 @@ class App extends React.Component {
   }
 }
 ```
-
 [在线查看可运行的代码](https://stackblitz.com/edit/bbx-example-hello)
 
-# 说明
+2. Use 组件
 
-- **State**: 状态类要继承于这个 State
+你还可通过 `Use 组件` 来使用 state。当 state 更新了，组件也会更新。
 
-```jsx
-import { State} from 'bbx';
-```
-
-- **this.state**: 定义默认的状态
 
 ```jsx
-class User extends State {
-  // 定义默认的 state
-  state = { say: 'hello 👶' }
+import { Use } from 'bbx';
+
+
+class App extends React.Component {
+  render() {
+    return <div> 
+      <Use state={hello}>
+        {() =>
+          <div>
+            {hello.state.say}
+          </div>
+        }
+      </Use>
+      <button onClick={() => hello.hi()}>hi</button>
+    </div>
+  }
 }
 ```
 
-- **this.setState**: 修改 state
-
-```jsx
-class User extends State {
-  state = { say: 'hello 👶' }
-  
-  // 定义一个方法，使用 this.setState 修改 state
-  hi() { this.setState({ say: 'hi !' }) }
-}
-```
-
-
-- **connect**: 状态实例通过 connect 方法连接到 React 组件
-
-```jsx
-import { connect} from 'bbx';
-```
-
-示例只 connect 了一个实例，实际上，你可根据需求 connect 多个实例：
-
-```jsx
-@connect(hello, user, custom)
-```
-
+[在线查看可运行的代码](https://stackblitz.com/edit/bbx-example-hello-use)

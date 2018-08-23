@@ -1,8 +1,8 @@
 # loading 修饰器
 
-为了简化判断一个异步方法是否执行完成，可采用 loading [修饰器](http://es6.ruanyifeng.com/#docs/decorator)。
+为了简化判断一个异步方法是否执行完成，可采用 loading 修饰器。
 
-在 [“开始使用 - 异步方法”](async.html)，发起了一个请求用户的异步方法：
+在 [异步方法](async.html)，发起了一个请求用户的异步方法：
 
 ```jsx
 ...
