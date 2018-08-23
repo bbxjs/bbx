@@ -1,25 +1,25 @@
 const bind = (state) => {
-  let array = state.didStateUpdate.bbxStateArray;
-  if (!array) {
-    array = [];
+  let bbxState = state.didStateUpdate.bbxState;
+  if (!bbxState) {
+    bbxState = {
+      array: [],
+      add(didStateUpdate) {
+        this.array.push(didStateUpdate);
+        return this;
+      },
+      remove(didStateUpdate) {
+        const index = this.array.indexOf(didStateUpdate);
+        this.array.splice(index, 1);
+      },
+    };
     const didStateUpdate = state.didStateUpdate.bind(state);
     state.didStateUpdate = (...args) => {
       didStateUpdate(...args);
-      array.forEach(item => item());
+      bbxState.array.forEach(item => item());
     };
-    state.didStateUpdate.bbxStateArray = array;
+    state.didStateUpdate.bbxState = bbxState;
   }
-
-  return {
-    add(didStateUpdate) {
-      array.push(didStateUpdate);
-      return this;
-    },
-    remove(didStateUpdate) {
-      const index = array.indexOf(didStateUpdate);
-      array.splice(index, 1);
-    },
-  };
+  return bbxState;
 };
 
 export default bind;
