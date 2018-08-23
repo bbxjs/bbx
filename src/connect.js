@@ -1,14 +1,8 @@
 import React from 'react';
+import bind from './bind';
 
 const connect = (...list) => {
-  const array = [];
-  list.forEach((obj) => {
-    const didStateUpdate = obj.didStateUpdate.bind(obj);
-    obj.didStateUpdate = (...args) => {
-      didStateUpdate(...args);
-      array.forEach(item => item());
-    };
-  });
+  const array = list.map(obj => bind(obj));
 
   return (A) => {
     if (React.PureComponent && A.prototype instanceof React.PureComponent) {
@@ -17,12 +11,13 @@ const connect = (...list) => {
     return class extends React.Component {
       constructor(props) {
         super(props);
-        this.index = array.push(() => this.setState({})) - 1;
+        this.didStateUpdate = () => this.setState({});
+        array.forEach(item => item.add(this.didStateUpdate));
         this.state = {};
       }
 
       componentWillUnmount() {
-        array.splice(this.index, 1);
+        array.forEach(item => item.remove(this.didStateUpdate));
       }
 
       render() {
